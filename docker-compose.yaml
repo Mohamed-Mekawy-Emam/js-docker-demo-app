@@ -1,7 +1,7 @@
 version: '3'
 services:
   my-app:
-    image: mohamedmekawyemam/my-app:1.0
+    image: mohamedmekawyemam/my-app:2.0
     ports:
       - 3000:3000
   mongodb:

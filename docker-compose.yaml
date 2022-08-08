@@ -12,7 +12,7 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=password
     volumes:
-      - mongo-data:/data/db
+      - mongo-data:/data/db #as default path for mongoDB is /data/db
   mongo-express:
     image: mongo-express
     restart: always # fixes MongoNetworkError when mongodb is not ready when mongo-express starts
@@ -27,4 +27,4 @@ services:
       - ME_CONFIG_MONGODB_SERVER=mongodb
 volumes:
   mongo-data:
-    driver: local
+    driver: local #this is an additional information for docker to create that physical storage on a local file system
